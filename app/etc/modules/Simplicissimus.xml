@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+ <config>
+     <modules>
+	<Simplicissimus_Uservoice>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Simplicissimus_Uservoice>
+     </modules>
+</config>
+

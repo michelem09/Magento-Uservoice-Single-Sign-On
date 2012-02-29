@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Simplicissimus Book Farm
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @copyright   Copyright (c) 2012 Simplicissimus Book Farm srl (http://www.simplicissimus.it)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Simplicissimus_Uservoice>
+            <version>0.1.0</version>
+        </Simplicissimus_Uservoice>
+    </modules>
+	
+    <global>
+		<blocks>
+            <simplicissimus_uservoice>
+            	<class>Simplicissimus_Uservoice_Block</class>
+            </simplicissimus_uservoice>
+        </blocks>
+		<models>
+            <simplicissimus_uservoice>
+            	<class>Simplicissimus_Uservoice_Model</class>
+            </simplicissimus_uservoice>
+        </models>
+		<helpers>
+            <simplicissimus_uservoice>
+            	<class>Simplicissimus_Uservoice_Helper</class>
+            </simplicissimus_uservoice>
+        </helpers>
+	</global>
+	
+    <frontend>
+        <routers>
+            <simplicissimus_uservoice>
+                <use>standard</use>
+                <args>
+                    <module>Simplicissimus_Uservoice</module>
+                    <frontName>uservoice</frontName>
+                </args>
+            </simplicissimus_uservoice>
+        </routers>
+        <layout>
+            <updates>
+                <simplicissimus_uservoice module="simplicissimus_uservoice">
+                    <file>uservoice.xml</file>
+                </simplicissimus_uservoice>
+            </updates>
+        </layout>
+    </frontend>
+
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<uservoice_settings translate="title" module="simplicissimus_uservoice">
+											<title>Uservoice Single Sign-On</title>
+											<sort_order>60</sort_order>
+										</uservoice_settings>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+    </adminhtml>
+	
+</config>

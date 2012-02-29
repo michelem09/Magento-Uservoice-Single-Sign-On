@@ -1,0 +1,72 @@
+<?php
+/**
+ * Simplicissimus Book Farm
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @copyright   Copyright (c) 2012 Simplicissimus Book Farm srl (http://www.simplicissimus.it)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+
+<body>
+
+<?php echo $this->getChildHtml('after_body_start') ?>
+
+<!-- Main Wrapper -->
+<div id="wrapper" class="container ">
+	<div class="my-account" style="background-image: none; padding-bottom: 0px;">
+		<div class="account-wrp">
+			<div class="blocco-notes">
+				<div class="scheda">
+					<div class="info">
+						<div class="txt">
+							<div class="account-login">
+								<div class="page-title">
+									<h1>Effettua il Login</h1>
+								</div>
+								<form action="<?php echo $this->getUrl("uservoice/index/loginPost") ?>" method="post">
+									<input type="hidden" name="returnUrl" value="<?php echo $this->getRequest()->getParam('return'); ?>" />
+									<table>
+									    <tr>
+									    	<td><label>Username</label></td>
+									    	<td><input type="text" id="modlgn_username" name="login[username]" value="" /></td>
+									    </tr>
+								    	<tr>
+								    		<td><label>Password</label></td>
+								    		<td><input type="password" id="modlgn_passwd" name="login[password]" value="" /></td>
+								    	</tr>
+									    <tr>
+									    	<td colspan="2"><button type="submit" class="login">Login</button></td>
+									    </tr>
+								    </table>
+								</form>
+								<p><br />Non sei registrato? <a href="<?php echo $this->getUrl("customer/account/create") ?>" target="_BLANK">Registrati qui</a>.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="account-shadow"><div class="sx"></div><div class="dx"></div></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
