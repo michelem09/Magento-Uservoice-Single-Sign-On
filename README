@@ -1,1 +1,14 @@
-- First release README is coming...
+/*	 Magento Uservoice Single Sign-On	*/
+/*	 by Michele Marcucci			*/
+/*	 http://www.michelem.org		*/
+
+This is a pretty simple extension for Magento which enables single sign-on authentication between Magento Customers and Uservoice support site.
+
+Based upon the original Uservoice documentation (you can find it here: http://developer.uservoice.com/docs/single-sign-on-how-to/) this Magento extension allow you:
+
+* configure basic settings (enable/disable, subdomain, SSO key, Javascript ID
+* automatically place user voice widget on commerce site (you can configure it on Uservoice admin page)
+* add ability to login both on ecommerce site and Uservoice with same account
+* add ability to automatically login on Uservoice when customer is already logged in on ecommerce site
+
+You should customize the file "app/design/frontend/default/default/template/page/1column-uservoice.phtml" this is the page called on the Uservoice popup when you are nbot logged in and you request to login.
